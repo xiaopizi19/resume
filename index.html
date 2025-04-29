@@ -2,83 +2,205 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fucai Zhang - Resume</title>
+  <title>Zhang Fucai - Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #222222;
+      --accent-color: #0066cc;
+      --section-bg: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --accent-color: #3399ff;
+        --section-bg: #1e1e1e;
+      }
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-      background-color: #f4f4f4;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
     }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+
     h1, h2 {
-      color: #333;
-    }
-    h1 {
-      font-size: 32px;
+      color: var(--accent-color);
       margin-bottom: 10px;
     }
-    h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
-      margin-top: 30px;
-    }
-    p, li {
-      font-size: 16px;
-      color: #555;
-    }
-    .contact {
+
+    h1 {
+      font-size: 32px;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
       margin-bottom: 30px;
     }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 40px;
+    }
+
     .section {
+      background: var(--section-bg);
+      padding: 20px;
+      border-radius: 8px;
       margin-bottom: 20px;
+    }
+
+    .job-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .meta {
+      font-style: italic;
+      color: var(--text-color);
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Fucai Zhang</h1>
-    <div class="contact">
-      <p>M: (+86) 186-1667-5679 | E: zhangfucai04@gmail.com</p>
-    </div>
 
-    <div class="section">
-      <h2>Profile</h2>
-      <p>10+ years of game development experience with expertise in Unity3D and Cocos2dx engines.</p>
-      <p>Proficient in Network Programming.</p>
-      <p>Shipped multiple games from concept to launch.</p>
-      <p>Passionate about game development and open source software.</p>
-      <p>Currently contributing to the Ant open source engine project by Yunfeng.</p>
-    </div>
+  <h1>Zhang Fucai</h1>
+  <p><strong>Phone:</strong> (+86) 186-1667-5679<br>
+     <strong>Email:</strong> <a href="mailto:zhangfucai044@126.com">zhangfucai044@126.com</a></p>
 
-    <div class="section">
-      <h2>Employment History & Projects</h2>
-      <ul>
-        <li><strong>Shanghai Huan Dynamic Technology Co., Ltd.</strong> (Shanghai, China) — Advanced Game Developer (2020.04 - Present)</li>
-        <li><strong>Jump World Holding Limited</strong> (Shanghai, China) — Senior Game Developer (2016.06 - 2020.04)</li>
-        <li><strong>Shanghai Yinhe Shuyu Network Technology Co., Ltd.</strong> (Shanghai, China) — Game Developer (2015.12 - 2016.06)</li>
-        <li><strong>Mobile Embedded Technology Co., Ltd.</strong> (Shanghai, China) — Game Developer (2013.08 - 2015.12)</li>
-        <li><strong>BOSi Art Studios</strong> (Shanghai, China) — Developer IT Support Specialist (2012.04 - 2013.06)</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Education</h2>
-      <p>2007-2011: <strong>Anhui Agricultural University</strong>, Bachelor of Science in Information and Computing Science — Hefei, China</p>
-    </div>
-
-    <div class="section">
-      <h2>Skills</h2>
-      <p>Unity3D, Cocos2dx, Network Programming, Game Architecture Design, Debugging and Optimization, Open Source Contribution</p>
-    </div>
+  <div class="section">
+    <h2>Profile</h2>
+    <p>Over 10 years of experience in game development, proficient in Unity3D and Cocos2d-x engines. Familiar with Linux-based development and network programming. Participated in several complete game development and release cycles. Enthusiastic about open source and passionate about programming. Currently researching network synchronization, with a focus on Yufeng's Ant and Skynet open-source engines. Successfully reverse-engineered the Aspose library to automate the conversion of PSD files into Unity resources.</p>
   </div>
+
+  <div class="section">
+    <h2>Work Experience</h2>
+
+    <div class="job-title">Senior Game Developer</div>
+    <div class="meta">Shanghai HuanDong Technology Co., Ltd. | Shanghai, China | Mar 2024 – Present</div>
+    <p><strong>Game:</strong> Journey to the West: Legend of Subjugation (RPG + Side-Scrolling Fighting)</p>
+    <ul>
+      <li>Enhanced support for gameplay requirements</li>
+      <li>Refactored UI module from NGUI to UGUI; reduced chat system codebase from 5,000 to 1,000 lines</li>
+      <li>Optimized data structures</li>
+    </ul>
+
+    <div class="meta">Apr 2020 – Mar 2024</div>
+    <p><strong>Game:</strong> The King of Fighters: Dynasty Warriors 2 (Side-Scrolling Action)</p>
+    <ul>
+      <li>Assigned development tasks and ensured version iterations</li>
+      <li>Developed tools for artists</li>
+      <li>Handled growth and event systems</li>
+      <li>Reduced memory usage through performance optimization</li>
+    </ul>
+
+    <div class="job-title">Senior Game Developer</div>
+    <div class="meta">Shanghai Tiaoyue Network Technology Co., Ltd. | Oct 2018 – Apr 2020</div>
+    <p><strong>Game:</strong> Gun Realm (FPS)</p>
+    <ul>
+      <li>Developed core combat logic including climbing system</li>
+      <li>Fixed bugs in post-production phase</li>
+    </ul>
+
+    <div class="meta">Jun 2016 – Oct 2018</div>
+    <p><strong>Game:</strong> 300 Tanks (RTS)</p>
+    <ul>
+      <li>System-level module development</li>
+      <li>Resource loading and update modules</li>
+      <li>Performance optimization: occlusion culling, lighting, texture merging, draw call reduction</li>
+    </ul>
+
+    <div class="job-title">Game Developer</div>
+    <div class="meta">Shanghai Galaxy Digital Entertainment Co., Ltd. | Dec 2015 – Jun 2016</div>
+    <p><strong>Game:</strong> Endless Prison (Wuxia ARPG)</p>
+    <ul>
+      <li>Reconstructed communication protocols with Protobuf</li>
+      <li>Implemented core game modules</li>
+      <li>Set up Jenkins automation for Unity Android/iOS builds</li>
+      <li>Reduced package size and improved performance</li>
+    </ul>
+
+    <div class="job-title">Game Developer</div>
+    <div class="meta">Shanghai YoungXun Computer Technology Co., Ltd. | Aug 2013 – Dec 2015</div>
+    <p><strong>Game:</strong> Ultraman Series OL (Card-based Turn-based)</p>
+    <ul>
+      <li>Developed game logic modules</li>
+      <li>Integrated SDKs for multiple platforms</li>
+      <li>Implemented App Store payment</li>
+    </ul>
+
+    <p><strong>Game:</strong> Love Town (Social Game, Cocos2d-x) | Aug 2013 – Jun 2014</p>
+    <ul>
+      <li>Developed gameplay logic</li>
+      <li>Engine upgrade from Cocos2d-x 1.0 to 2.4</li>
+      <li>Integrated SDKs: QQ, Weibo, Facebook</li>
+    </ul>
+
+    <div class="job-title">IT Operations Specialist</div>
+    <div class="meta">Shanghai Boshi Information Technology Co., Ltd. | Apr 2012 – Jun 2013</div>
+    <ul>
+      <li>Maintained company server infrastructure</li>
+      <li>Configured and debugged network systems</li>
+      <li>Provided desktop and office IT support</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Education</h2>
+    <p><strong>Anhui Agricultural University</strong><br>
+    Bachelor of Science in Information and Computing Science<br>
+    Hefei, China | Sep 2007 – Jul 2011</p>
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li>Proficient in Unity3D and Cocos Creator engines</li>
+      <li>Skilled in C/C++, C#, Lua</li>
+      <li>Experience in full client-server framework architecture</li>
+      <li>Good command of AI tools: Gemini, ChatGPT, Copilot, and prompt crafting</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Additional Skills</h2>
+    <ul>
+      <li>Collaborate effectively with game designers to refine and expand gameplay features</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Other Information</h2>
+    <ul>
+      <li><strong>Tech Stack:</strong> C/C++, C#, Lua</li>
+      <li><strong>Languages:</strong> English (CET-4)</li>
+      <li><strong>Certification:</strong> Intermediate Software Designer</li>
+    </ul>
+  </div>
+
 </body>
 </html>
