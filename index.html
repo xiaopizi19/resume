@@ -10,6 +10,9 @@
       --text-color: #222222;
       --accent-color: #0066cc;
       --section-bg: #f5f5f5;
+      --card-bg: #ffffff;
+      --card-border: #ccc;
+      --spacing: 20px;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -18,6 +21,8 @@
         --text-color: #e0e0e0;
         --accent-color: #3399ff;
         --section-bg: #1e1e1e;
+        --card-bg: #2e2e2e;
+        --card-border: #444;
       }
     }
 
@@ -28,22 +33,34 @@
       background-color: var(--bg-color);
       color: var(--text-color);
       line-height: 1.7;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
     }
 
-    h1, h2 {
-      color: var(--accent-color);
-      margin-bottom: 10px;
+    .container {
+      max-width: 900px;
+      width: 100%;
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      padding: var(--spacing);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--card-border);
     }
 
     h1 {
-      font-size: 32px;
-      border-bottom: 2px solid var(--accent-color);
+      font-size: 36px;
+      color: var(--accent-color);
+      text-align: center;
+      border-bottom: 3px solid var(--accent-color);
       padding-bottom: 10px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     h2 {
-      font-size: 22px;
+      font-size: 24px;
+      color: var(--accent-color);
       margin-top: 40px;
     }
 
@@ -57,7 +74,7 @@
     .job-title {
       font-weight: bold;
       font-size: 16px;
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     .meta {
@@ -88,119 +105,114 @@
 </head>
 <body>
 
-  <h1>Zhang Fucai</h1>
-  <p><strong>Phone:</strong> (+86) 186-1667-5679<br>
-     <strong>Email:</strong> <a href="mailto:zhangfucai044@126.com">zhangfucai04@gmail.com</a></p>
+  <div class="container">
+    <h1>Zhang Fucai</h1>
+    <p><strong>Phone:</strong> (+86) 186-1667-5679<br>
+       <strong>Email:</strong> <a href="mailto:zhangfucai04@gmail.com">zhangfucai04@gmail.com</a></p>
 
-  <div class="section">
-    <h2>Profile</h2>
-    <p>Over 10 years of experience in game development, proficient in Unity3D and Cocos2d-x engines. Familiar with Linux-based development and network programming. Participated in several complete game development and release cycles. Enthusiastic about open source and passionate about programming. Currently researching network synchronization, with a focus on Yufeng's Ant and Skynet open-source engines. Successfully reverse-engineered the Aspose library to automate the conversion of PSD files into Unity resources.</p>
-  </div>
+    <div class="section">
+      <h2>Profile</h2>
+      <p>Over 10 years of experience in game development, proficient in Unity3D and Cocos2d-x engines. Familiar with Linux-based development and network programming. Participated in several complete game development and release cycles. Enthusiastic about open source and passionate about programming. Currently researching network synchronization, with a focus on Yufeng's Ant and Skynet open-source engines. Successfully reverse-engineered the Aspose library to automate the conversion of PSD files into Unity resources.</p>
+    </div>
 
-  <div class="section">
-    <h2>Work Experience</h2>
+    <div class="section">
+      <h2>Work Experience</h2>
 
-    <div class="job-title">Senior Game Developer</div>
-    <div class="meta">Shanghai HuanDong Technology Co., Ltd. | Shanghai, China | Mar 2024 – Present</div>
-    <p><strong>Game:</strong> Journey to the West: Legend of Subjugation (RPG + Side-Scrolling Fighting)</p>
-    <ul>
-      <li>Enhanced support for gameplay requirements</li>
-      <li>Refactored UI module from NGUI to UGUI; reduced chat system codebase from 5,000 to 1,000 lines</li>
-      <li>Optimized data structures</li>
-    </ul>
+      <div class="job-title">Senior Game Developer</div>
+      <div class="meta">Shanghai HuanDong Technology Co., Ltd. | Shanghai, China | Mar 2024 – Present</div>
+      <p><strong>Game:</strong> Journey to the West: Legend of Subjugation (RPG + Side-Scrolling Fighting)</p>
+      <ul>
+        <li>Enhanced support for gameplay requirements</li>
+        <li>Refactored UI module from NGUI to UGUI; reduced chat system codebase from 5,000 to 1,000 lines</li>
+        <li>Optimized data structures</li>
+      </ul>
 
-    <div class="meta">Apr 2020 – Mar 2024</div>
-    <p><strong>Game:</strong> The King of Fighters: Dynasty Warriors 2 (Side-Scrolling Action)</p>
-    <ul>
-      <li>Assigned development tasks and ensured version iterations</li>
-      <li>Developed tools for artists</li>
-      <li>Handled growth and event systems</li>
-      <li>Reduced memory usage through performance optimization</li>
-    </ul>
+      <div class="meta">Apr 2020 – Mar 2024</div>
+      <p><strong>Game:</strong> The King of Fighters: Dynasty Warriors 2 (Side-Scrolling Action)</p>
+      <ul>
+        <li>Assigned development tasks and ensured version iterations</li>
+        <li>Developed tools for artists</li>
+        <li>Handled growth and event systems</li>
+        <li>Reduced memory usage through performance optimization</li>
+      </ul>
 
-    <div class="job-title">Senior Game Developer</div>
-    <div class="meta">Shanghai Tiaoyue Network Technology Co., Ltd. | Oct 2018 – Apr 2020</div>
-    <p><strong>Game:</strong> Gun Realm (FPS)</p>
-    <ul>
-      <li>Developed core combat logic including climbing system</li>
-      <li>Fixed bugs in post-production phase</li>
-    </ul>
+      <div class="job-title">Senior Game Developer</div>
+      <div class="meta">Shanghai Tiaoyue Network Technology Co., Ltd. | Oct 2018 – Apr 2020</div>
+      <p><strong>Game:</strong> Gun Realm (FPS)</p>
+      <ul>
+        <li>Developed core combat logic including climbing system</li>
+        <li>Fixed bugs in post-production phase</li>
+      </ul>
 
-    <div class="meta">Jun 2016 – Oct 2018</div>
-    <p><strong>Game:</strong> 300 Tanks (RTS)</p>
-    <ul>
-      <li>System-level module development</li>
-      <li>Resource loading and update modules</li>
-      <li>Performance optimization: occlusion culling, lighting, texture merging, draw call reduction</li>
-    </ul>
+      <div class="meta">Jun 2016 – Oct 2018</div>
+      <p><strong>Game:</strong> 300 Tanks (RTS)</p>
+      <ul>
+        <li>System-level module development</li>
+        <li>Resource loading and update modules</li>
+        <li>Performance optimization: occlusion culling, lighting, texture merging, draw call reduction</li>
+      </ul>
 
-    <div class="job-title">Game Developer</div>
-    <div class="meta">Shanghai Galaxy Digital Entertainment Co., Ltd. | Dec 2015 – Jun 2016</div>
-    <p><strong>Game:</strong> Endless Prison (Wuxia ARPG)</p>
-    <ul>
-      <li>Reconstructed communication protocols with Protobuf</li>
-      <li>Implemented core game modules</li>
-      <li>Set up Jenkins automation for Unity Android/iOS builds</li>
-      <li>Reduced package size and improved performance</li>
-    </ul>
+      <div class="job-title">Game Developer</div>
+      <div class="meta">Shanghai Galaxy Digital Entertainment Co., Ltd. | Dec 2015 – Jun 2016</div>
+      <p><strong>Game:</strong> Endless Prison (Wuxia ARPG)</p>
+      <ul>
+        <li>Reconstructed communication protocols with Protobuf</li>
+        <li>Implemented core game modules</li>
+        <li>Set up Jenkins automation for Unity Android/iOS builds</li>
+        <li>Reduced package size and improved performance</li>
+      </ul>
 
-    <div class="job-title">Game Developer</div>
-    <div class="meta">Shanghai YoungXun Computer Technology Co., Ltd. | Aug 2013 – Dec 2015</div>
-    <p><strong>Game:</strong> Ultraman Series OL (Card-based Turn-based)</p>
-    <ul>
-      <li>Developed game logic modules</li>
-      <li>Integrated SDKs for multiple platforms</li>
-      <li>Implemented App Store payment</li>
-    </ul>
+      <div class="job-title">Game Developer</div>
+      <div class="meta">Shanghai YoungXun Computer Technology Co., Ltd. | Aug 2013 – Dec 2015</div>
+      <p><strong>Game:</strong> Ultraman Series OL (Card-based Turn-based)</p>
+      <ul>
+        <li>Developed game logic modules</li>
+        <li>Integrated SDKs for multiple platforms</li>
+        <li>Implemented App Store payment</li>
+      </ul>
 
-    <p><strong>Game:</strong> Love Town (Social Game, Cocos2d-x) | Aug 2013 – Jun 2014</p>
-    <ul>
-      <li>Developed gameplay logic</li>
-      <li>Engine upgrade from Cocos2d-x 1.0 to 2.4</li>
-      <li>Integrated SDKs: QQ, Weibo, Facebook</li>
-    </ul>
+      <p><strong>Game:</strong> Love Town (Social Game, Cocos2d-x) | Aug 2013 – Jun 2014</p>
+      <ul>
+        <li>Developed gameplay logic</li>
+        <li>Engine upgrade from Cocos2d-x 1.0 to 2.4</li>
+        <li>Integrated SDKs: QQ, Weibo, Facebook</li>
+      </ul>
 
-    <div class="job-title">IT Operations Specialist</div>
-    <div class="meta">Shanghai Boshi Information Technology Co., Ltd. | Apr 2012 – Jun 2013</div>
-    <ul>
-      <li>Maintained company server infrastructure</li>
-      <li>Configured and debugged network systems</li>
-      <li>Provided desktop and office IT support</li>
-    </ul>
-  </div>
+      <div class="job-title">IT Operations Specialist</div>
+      <div class="meta">Shanghai Boshi Information Technology Co., Ltd. | Apr 2012 – Jun 2013</div>
+      <ul>
+        <li>Maintained company server infrastructure</li>
+        <li>Configured and debugged network systems</li>
+        <li>Provided desktop and office IT support</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>Education</h2>
-    <p><strong>Anhui Agricultural University</strong><br>
-    Bachelor of Science in Information and Computing Science<br>
-    Hefei, China | Sep 2007 – Jul 2011</p>
-  </div>
+    <div class="section">
+      <h2>Education</h2>
+      <p><strong>Anhui Agricultural University</strong><br>
+      Bachelor of Science in Information and Computing Science<br>
+      Hefei, China | Sep 2007 – Jul 2011</p>
+    </div>
 
-  <div class="section">
-    <h2>Skills</h2>
-    <ul>
-      <li>Proficient in Unity3D and Cocos Creator engines</li>
-      <li>Skilled in C/C++, C#, Lua</li>
-      <li>Experience in full client-server framework architecture</li>
-      <li>Good command of AI tools: Gemini, ChatGPT, Copilot, and prompt crafting</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Proficient in Unity3D and Cocos Creator engines</li>
+        <li>Skilled in C/C++, C#, Lua</li>
+        <li>Experience in full client-server framework architecture</li>
+        <li>Good command of AI tools: Gemini, ChatGPT, Copilot, and prompt crafting</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>Additional Skills</h2>
-    <ul>
-      <li>Collaborate effectively with game designers to refine and expand gameplay features</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>Additional Skills</h2>
+      <ul>
+        <li>Collaborate effectively with game designers to refine and expand gameplay features</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>Other Information</h2>
-    <ul>
-      <li><strong>Tech Stack:</strong> C/C++, C#, Lua</li>
-      <li><strong>Languages:</strong> English (CET-4)</li>
-      <li><strong>Certification:</strong> Intermediate Software Designer</li>
-    </ul>
-  </div>
-
-</body>
-</html>
+    <div class="section">
+      <h2>Other Information</h2>
+      <ul>
+        <li><strong>Tech Stack:</strong> C/C++, C#, Lua</li>
+        <li><strong>Languages:</strong> English
